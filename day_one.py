@@ -3,7 +3,7 @@
 #  1. args, kwargs를 사용하는 예제 코드 짜보기
 
 class Example():
-    def __init__(self, args, kwargs):
+    def __init__(self, *args, **kwargs):
         self.args = args
         self.kwargs = kwargs
 
@@ -31,7 +31,7 @@ class Example2():
 
 
 if __name__ == '__main__':
-    ex = Example(1, 2)
+    ex = Example(1, 2, 3, 4, name="이민기", age="???", hobby="코딩")
     print(ex)
     ex2 = Example2('스파르타')
     print('immutable(값이 변하지 않음) : ' + ex2.immutable())
